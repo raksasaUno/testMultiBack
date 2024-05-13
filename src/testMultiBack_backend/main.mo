@@ -15,7 +15,11 @@ actor {
         userPrincipal
     };
 
-    
+    public query func getCanistersID(): async [Text]{
+        let actorPrincipals = Set.toArray<Principal>(actors);
+        let size = Set.size(actors);
+        Internal.Array_tabulate<Text>(size, func x = Principal.toText(actorPrincipals[x]));
+    };
 
     
 };

@@ -4,5 +4,5 @@ shared actor class User(name: Text){
         counter += 1;
         name
     };
-    public func getCounter(): async Nat {counter};
+    public query func getCounter(): async Nat {counter};
 };
